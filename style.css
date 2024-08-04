@@ -9,6 +9,14 @@ body {
     justify-items:baseline;
 }
 
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 700,
+  'GRAD' 200,
+  'opsz' 48
+}
+
 header, section {
     padding: 1.2vw 3vh;
 }
@@ -35,6 +43,20 @@ button:hover {
     transform: scale(1.05);
 }
 
+#icons-container {
+    padding: 1vh;
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    position: fixed;
+    right: 20vw;
+    bottom: 4vh;
+
+    background-color: #d3d3d3;
+    transform: scale(1.75);
+    border-radius: 5px;
+}
+
 #side-lay-left {
     position: fixed;
     width: 16vw;
@@ -42,7 +64,8 @@ button:hover {
     background-image: url("https://plus.unsplash.com/premium_photo-1679656264640-90dbbaccc2b0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y3JpY2tldHxlbnwwfHwwfHx8MA%3D%3D");
     background-repeat: no-repeat;
     top: 0;
-    left: 0;    
+    left: 0;
+    box-shadow: 3px 5px 12px hsla(0, 2%, 70%, 0.735);
 }
 
 #side-lay-right {
@@ -53,6 +76,26 @@ button:hover {
     background-repeat: no-repeat;
     top: 0;
     right: 0;    
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 60% }
+}
+  
+/* The typewriter cursor effect */
+@keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: #000; }
+}
+
+#overlay-title {
+  overflow: hidden;
+  border-right: .15em solid #000;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 4s steps(40, end), blink .75s step-end infinite;
 }
 
 #left-overlay, #right-overlay {
@@ -92,7 +135,7 @@ button:hover {
     width: 50vw;
     display: flex;
     flex-direction: column;
-    gap: 3vh;
+    gap: 5vh;
     justify-content: center;
     align-items: center;
 }
@@ -101,7 +144,7 @@ button:hover {
     width: 21vw;
     background-color: #000;
     color: #fff;
-    padding: 2vh;
+    padding: 1vh;
 }
 
 #archieve-img img {
@@ -113,5 +156,6 @@ button:hover {
     width: 30vw;
     height: auto;
     margin: 3vh 10vw;
-    border: 5px solid black;
+    border: 5px solid #000;
+    transform: rotate(4deg);
 }

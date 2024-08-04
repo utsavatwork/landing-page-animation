@@ -55,20 +55,41 @@ const raiseCurtain = () => {
         document.getElementById('left-overlay') as HTMLDivElement;
     const rightOverlay = 
         document.getElementById('right-overlay') as HTMLDivElement;
-    leftOverlay.style.left = '-102vw';
-    rightOverlay.style.left = '102vw';
+    leftOverlay.style.left = '-100vw';
+    rightOverlay.style.left = '100vw';
 }
 
-window.addEventListener('DOMContentLoaded', (event): any => {  
+window.addEventListener('DOMContentLoaded', (event): any => {
+    const materialIconsLink = document.createElement('link');
+    materialIconsLink.setAttribute('rel', 'stylesheet');
+    materialIconsLink.setAttribute('href', 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,200');    
+    document.head.appendChild(materialIconsLink);
+
+    const emailLink = document.createElement('a');
+    emailLink.setAttribute('href', 'mailto:info@nyrcl.com');
+    const emailIcon = document.createElement("i");
+    emailIcon.setAttribute('class', 'material-symbols-outlined large');
+    emailIcon.innerText = 'email';
+    emailLink.appendChild(emailIcon);
+
+    const callLink = document.createElement('a');
+    callLink.setAttribute('href', 'tel:5551234567');
+    const callIcon = document.createElement("i");
+    callIcon.setAttribute('class', 'material-symbols-outlined large');
+    callIcon.innerText = 'call';
+    callLink.appendChild(callIcon);
+
+    const iconsContainer = document.createElement('div');
+    iconsContainer.id = 'icons-container';
+    iconsContainer.append(emailLink, callLink);
+
     const sideLayLeft = document.createElement("div");
     sideLayLeft.id = 'side-lay-left';
     const sideLayRight = document.createElement("div");
     sideLayRight.id = 'side-lay-right';
-    // sideLayLeft.appendChild(sideLayImgInstance());
-    // sideLayRight.appendChild(sideLayImgInstance());
-    document.body.append(buildLeftOverlay(), buildRightOverlay(), sideLayLeft, sideLayRight);   
-    // raiseCurtain();
-  });
+
+    document.body.append(buildLeftOverlay(), buildRightOverlay(), iconsContainer, sideLayLeft, sideLayRight);   
+});
   
 window.addEventListener('load', () => {
     document.body.style.opacity = '1';
