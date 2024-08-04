@@ -9,10 +9,10 @@ Enhance design of the landing page. Uses javascript, css to make the [index.html
 
 ## Demo
 <!-- Show us your project! You can directly embed an editor into this post (see the FAQ section from the challenge page) or you can share an image of your project and share a public link to the code. -->
-![Alt text](./screenshot.jpg "Landing Page")
+The page has been hosted on Github Pages. You can check it at this [url](https://utsavatwork.github.io/landing-page-animation/). One screenshot is provided below but, if you want to see the animation you must consider visiting the given link.
+
 ![Alt text](./screenshot2.jpg "Landing Page")
 
-## Journey
-<!-- Tell us about your process, what you learned, anything you are particularly proud of, what you hope to do next, etc. -->
+## License
 
-<!-- We encourage you to consider adding a license for your code. -->
+This project is licensed under the [GNU General Public License v3.0](LICENSE)
