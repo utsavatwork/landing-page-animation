@@ -1,4 +1,8 @@
 "use strict";
+/**
+ * Build left hand side overlay on the page.
+ * @returns Overlay {@link HTMLElement element}.
+ */
 const buildLeftOverlay = () => {
     const leftOverlay = document.createElement('div');
     leftOverlay.id = 'left-overlay';
@@ -24,14 +28,14 @@ const buildLeftOverlay = () => {
     btn.onclick = (event) => {
         raiseCurtain();
     };
-    // btn.addEventListener('click', (event: MouseEvent) => {
-    //     console.log('kefwkefbkwfbwkjrfgwr');
-    //     raiseCurtain();
-    // });
     div.append(imgContainer, title, btn);
     leftOverlay.appendChild(div);
     return leftOverlay;
 };
+/**
+ * Build right hand side overlay on the page.
+ * @returns Overlay {@link HTMLElement element}.
+ */
 const buildRightOverlay = () => {
     const rightOverlay = document.createElement('div');
     rightOverlay.id = 'right-overlay';
@@ -41,6 +45,9 @@ const buildRightOverlay = () => {
     rightOverlay.append(newYorkImg);
     return rightOverlay;
 };
+/**
+ * Remove initial overlay on the page.
+ */
 const raiseCurtain = () => {
     const leftOverlay = document.getElementById('left-overlay');
     const rightOverlay = document.getElementById('right-overlay');

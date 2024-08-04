@@ -1,3 +1,7 @@
+/**
+ * Build left hand side overlay on the page.
+ * @returns Overlay {@link HTMLElement element}.
+ */
 const buildLeftOverlay = (): HTMLElement => {
     const leftOverlay = document.createElement('div') as HTMLDivElement;
     leftOverlay.id = 'left-overlay';
@@ -27,10 +31,6 @@ const buildLeftOverlay = (): HTMLElement => {
     btn.onclick = (event: MouseEvent) => {
         raiseCurtain();
     };
-    // btn.addEventListener('click', (event: MouseEvent) => {
-    //     console.log('kefwkefbkwfbwkjrfgwr');
-    //     raiseCurtain();
-    // });
 
     div.append(imgContainer, title, btn);
     leftOverlay.appendChild(div);
@@ -38,6 +38,10 @@ const buildLeftOverlay = (): HTMLElement => {
     return leftOverlay;
 }
 
+/**
+ * Build right hand side overlay on the page.
+ * @returns Overlay {@link HTMLElement element}.
+ */
 const buildRightOverlay = (): HTMLElement => {
     const rightOverlay = document.createElement('div') as HTMLDivElement;
     rightOverlay.id = 'right-overlay';
@@ -50,6 +54,9 @@ const buildRightOverlay = (): HTMLElement => {
     return rightOverlay;
 }
 
+/**
+ * Remove initial overlay on the page.
+ */
 const raiseCurtain = () => {
     const leftOverlay = 
         document.getElementById('left-overlay') as HTMLDivElement;
